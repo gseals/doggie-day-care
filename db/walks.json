@@ -1,0 +1,7 @@
+{
+  "walk1": {
+    "dogId": "int",
+    "employeeId": "int",
+    "date": "date"
+  }
+}
