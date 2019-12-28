@@ -1,0 +1,7 @@
+{
+  "employee1": {
+    "firstName": "varchar",
+    "lastName": "varchar",
+    "phoneNumber": "varchar"
+  }
+}
