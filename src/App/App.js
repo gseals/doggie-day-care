@@ -4,18 +4,19 @@ import DogPen from '../components/DogPen/DogPen';
 import './App.scss';
 
 class App extends React.Component {
-  state ={
+  state = {
     dogs: [],
   }
 
   componentDidMount() {
-    this.getAllDogs();
+    const dogs = dogsData.getAllDogs();
+    this.setState({ dogs });
   }
 
   render() {
     return (
     <div className="App">
-        <DogPen />
+        <DogPen dogs={this.state.dogs} />
     </div>
     );
   }

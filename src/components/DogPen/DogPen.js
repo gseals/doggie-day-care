@@ -12,12 +12,12 @@ class DogPen extends React.Component {
   }
 
   render() {
-    const { dogs } = this.props;
-    const individualDogs = dogs.map((dog) => <Dog key={dog.id} dog={dog} />);
+    const myDogs = this.props.dogs;
+    const dogCards = myDogs.map((dog) => <Dog key={dog.id} dog={dog} />);
 
     return (
       <div className="Dogs container">
-        <div>{individualDogs}</div>
+        <div>{dogCards}</div>
       </div>
     );
   }

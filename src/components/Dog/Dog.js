@@ -8,16 +8,16 @@ class Dog extends React.Component {
   }
 
   render() {
-    const { dogs } = this.props;
+    const { dog } = this.props;
 
     return (
       <div className="Dog col-4">
       <div className="card">
-      <img src={dogs.imageUrl} className="card-img-top" alt="{dogs.name}"/>
+      <img src={dog.imageUrl} className="card-img-top" alt="dog"/>
         <div className="card-body">
-          <h5 className="card-title">{dogs.name}</h5>
-          <p className="card-text">Owner: {dogs.owner}</p>
-          <p className="card-text">{dogs.description}</p>
+          <h5 className="card-title">{dog.name}</h5>
+          <p className="card-text">Owner: {dog.owner}</p>
+          <p className="card-text">{dog.description}</p>
       </div>
     </div>
   </div>
