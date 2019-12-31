@@ -1,31 +1,52 @@
 import React from 'react';
-import dogsData from '../helpers/data/dogsData';
-import DogPen from '../components/DogPen/DogPen';
+import firebase from 'firebase/app';
 
-import employeesData from '../helpers/data/employeesData';
-import StaffRoom from '../components/StaffRoom/StaffRoom';
+import firebaseConnection from '../helpers/data/connection';
+import Auth from '../components/Auth/Auth';
+import MyNavBar from '../components/MyNavBar/MyNavBar';
+
+import Home from '../components/Home/Home';
 
 import './App.scss';
 
+firebaseConnection();
+
 class App extends React.Component {
   state = {
-    dogs: [],
-    employees: [],
+    authed: false,
   }
 
   componentDidMount() {
-    const dogs = dogsData.getAllDogs();
-    const employees = employeesData.getAllEmployees();
-    this.setState({ dogs, employees });
+    this.removeListener = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ authed: true });
+      } else {
+        this.setState({ authed: false });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.removeListener();
+  }
+
+  renderView = () => {
+    const { authed } = this.state;
+    if (!authed) {
+      return (<Auth />);
+    }
+    return (<Home />);
   }
 
   render() {
+    const { authed } = this.state;
+
     return (
     <div className="App">
-      <div className="row">
-        <DogPen className="container" dogs={this.state.dogs} />
-        <StaffRoom className="container" employees={this.state.employees} />
-        </div>
+      <MyNavBar authed={authed} />
+      {
+        this.renderView()
+      }
     </div>
     );
   }
