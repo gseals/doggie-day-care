@@ -15,7 +15,7 @@ class StaffRoom extends React.Component {
     const employeeCards = myEmployees.map((employee) => <Employee key={employee.id} employee={employee} />);
 
     return (
-      <div className="Employees container">
+      <div className="Employees col-6">
         <div>{employeeCards}</div>
       </div>
     );

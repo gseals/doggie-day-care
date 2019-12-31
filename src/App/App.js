@@ -22,8 +22,10 @@ class App extends React.Component {
   render() {
     return (
     <div className="App">
-        <DogPen dogs={this.state.dogs} />
-        <StaffRoom employees={this.state.employees} />
+      <div className="row">
+        <DogPen className="container" dogs={this.state.dogs} />
+        <StaffRoom className="container" employees={this.state.employees} />
+        </div>
     </div>
     );
   }
