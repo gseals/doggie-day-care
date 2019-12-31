@@ -1,4 +1,10 @@
 import React from 'react';
+import firebase from 'firebase/app';
+
+import firebaseConnection from '../helpers/data/connection';
+import Auth from '../components/Auth/Auth';
+import MyNavBar from '../components/'
+
 import dogsData from '../helpers/data/dogsData';
 import DogPen from '../components/DogPen/DogPen';
 
