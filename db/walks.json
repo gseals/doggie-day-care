@@ -1,7 +1,7 @@
 {
   "walk1": {
-    "dogId": "int",
-    "employeeId": "int",
-    "date": "date"
+    "dogId": "dog2",
+    "employeeId": "employee4",
+    "date": "10/25/2019"
   }
 }
