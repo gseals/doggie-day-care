@@ -1,7 +1,27 @@
 {
   "walk1": {
-    "dogId": "int",
-    "employeeId": "int",
-    "date": "date"
+    "dogId": "dog1",
+    "employeeId": "employee1",
+    "date": "10/25/2019"
+  },
+  "walk2": {
+    "dogId": "dog2",
+    "employeeId": "employee2",
+    "date": "11/01/2019"
+  },
+  "walk3": {
+    "dogId": "dog3",
+    "employeeId": "employee3",
+    "date": "11/05/2019"
+  },
+  "walk4": {
+    "dogId": "dog4",
+    "employeeId": "employee4",
+    "date": "11/20/2019"
+  },
+  "walk5": {
+    "dogId": "dog5",
+    "employeeId": "employee5",
+    "date": "12/01/2019"
   }
 }
