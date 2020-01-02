@@ -5,7 +5,6 @@ import './DogPen.scss';
 import Dog from '../Dog/Dog';
 import dogShape from '../../helpers/propz/dogShape';
 
-
 class DogPen extends React.Component {
   static propTypes = {
     dogs: PropTypes.arrayOf(dogShape.dogShape),
