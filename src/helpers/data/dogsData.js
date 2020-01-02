@@ -3,7 +3,7 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const getAllDogs = (uid) => new Promise((resolve, reject) => {
+const getAllDogs = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/dogs.json`)
     .then((result) => {
       const allDogs = result.data;
@@ -16,7 +16,6 @@ const getAllDogs = (uid) => new Promise((resolve, reject) => {
         });
       }
       resolve(dogs);
-      console.log(dogs);
     })
     .catch((error) => reject(error));
 });
