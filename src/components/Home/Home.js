@@ -14,14 +14,21 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.getAllDogs();
-    const employees = employeesData.getAllEmployees();
-    this.setState({ employees });
+    this.getAllEmployees();
   }
 
   getAllDogs = () => {
     dogsData.getAllDogs()
       .then((dogs) => {
         this.setState({ dogs });
+      })
+      .catch((error) => console.error({ error }));
+  }
+
+  getAllEmployees = () => {
+    employeesData.getAllEmployees()
+      .then((employees) => {
+        this.setState({ employees });
       })
       .catch((error) => console.error({ error }));
   }
