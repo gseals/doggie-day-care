@@ -1,10 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import walkShape from '../../helpers/propz/walkShape';
 import './Walk.scss';
 
 class Walk extends React.Component {
   static propTypes = {
-    walks: walkShape.walkShape,
+    walk: walkShape.walkShape,
+    deleteSingleWalk: PropTypes.func,
+  }
+
+  deleteSingleWalkEvent = (e) => {
+    e.preventDefault();
+    const { deleteSingleWalk, walk } = this.props;
+    deleteSingleWalk(walk.id);
   }
 
   render() {
@@ -17,6 +25,7 @@ class Walk extends React.Component {
           <h5 className="card-title">{walk.date}</h5>
           <p className="card-text">Walker: {walk.firstName} {walk.lastName}</p>
           <p className="card-text">Dog: {walk.dog}</p>
+          <button className="btn btn-danger" onClick={this.deleteSingleWalkEvent}>Delete</button>
       </div>
     </div>
   </div>
