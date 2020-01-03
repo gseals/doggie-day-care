@@ -4,7 +4,7 @@ import apiKeys from '../apiKeys.json';
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getAllWalks = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/walks/json`)
+  axios.get(`${baseUrl}/walks.json`)
     .then((result) => {
       const allWalks = result.data;
       const walks = [];

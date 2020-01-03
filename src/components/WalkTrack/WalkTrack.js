@@ -15,7 +15,7 @@ class WalkTrack extends React.Component {
     const walkCards = myWalks.map((walk) => <Walk key={walk.id} walk={walk} />);
 
     return (
-      <div className="Walks col-6">
+      <div className="Walks col-4">
         <div>{walkCards}</div>
       </div>
     );
