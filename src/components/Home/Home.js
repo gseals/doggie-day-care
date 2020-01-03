@@ -47,7 +47,7 @@ class Home extends React.Component {
 
   render() {
     return (
-    <div className="App">
+    <div className="Home">
       <div className="row">
         <DogPen className="container" dogs={this.state.dogs} />
         <StaffRoom className="container" employees={this.state.employees} />
