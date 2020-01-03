@@ -3,6 +3,8 @@ import dogsData from '../../helpers/data/dogsData';
 import DogPen from '../DogPen/DogPen';
 import employeesData from '../../helpers/data/employeesData';
 import StaffRoom from '../StaffRoom/StaffRoom';
+import walkData from '../../helpers/data/walksData';
+import WalkTrack from '../WalkTrack/WalkTrack';
 
 import './Home.scss';
 
@@ -10,11 +12,13 @@ class Home extends React.Component {
   state = {
     dogs: [],
     employees: [],
+    walks: [],
   }
 
   componentDidMount() {
     this.getAllDogs();
     this.getAllEmployees();
+    this.getAllWalks();
   }
 
   getAllDogs = () => {
