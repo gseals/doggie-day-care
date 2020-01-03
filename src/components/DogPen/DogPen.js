@@ -15,7 +15,7 @@ class DogPen extends React.Component {
     const dogCards = myDogs.map((dog) => <Dog key={dog.id} dog={dog} />);
 
     return (
-      <div className="Dogs col-6">
+      <div className="Dogs col-4">
         <div>{dogCards}</div>
       </div>
     );
