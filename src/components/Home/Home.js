@@ -37,12 +37,21 @@ class Home extends React.Component {
       .catch((error) => console.error({ error }));
   }
 
+  getAllWalks = () => {
+    walkData.getAllWalks()
+      .then((walks) => {
+        this.setState({ walks });
+      })
+      .catch((error) => console.error({ error }));
+  }
+
   render() {
     return (
     <div className="App">
       <div className="row">
         <DogPen className="container" dogs={this.state.dogs} />
         <StaffRoom className="container" employees={this.state.employees} />
+        <WalkTrack className="container" walks={this.state.walks} />
         </div>
     </div>
     );
