@@ -15,10 +15,14 @@ class WalkTrack extends React.Component {
   deleteSingleWalk = (walkId) => {
     walksData.deleteAWalk(walkId)
       .then(() => {
-        this.getAllWalks();
+        this.props.getAllWalks();
       })
       .catch((errorFromDeleteWalk) => console.error({ errorFromDeleteWalk }));
   }
+
+  // componentDidMount() {
+  //   this.props.getAllWalks();
+  // }
 
   render() {
     const myWalks = this.props.walks;
