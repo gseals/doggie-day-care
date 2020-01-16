@@ -38,7 +38,6 @@ class Home extends React.Component {
   }
 
   getAllWalks = () => {
-    console.log('getwalks');
     walkData.getAllWalks()
       .then((walks) => {
         this.setState({ walks });
@@ -52,7 +51,7 @@ class Home extends React.Component {
       <div className="row">
         <DogPen className="container" dogs={this.state.dogs} />
         <StaffRoom className="container" employees={this.state.employees} />
-        <WalkTrack className="container" walks={this.state.walks} getAllWalks={this.getAllWalks}/>
+        <WalkTrack className="container" employees={this.state.employees} dogs={this.state.dogs} walks={this.state.walks} getAllWalks={this.getAllWalks} />
         </div>
     </div>
     );
