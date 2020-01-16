@@ -43,7 +43,7 @@ class App extends React.Component {
 
     return (
     <div className="App">
-      <MyNavBar authed={authed} />
+      <MyNavBar className="container" authed={authed} />
       {
         this.renderView()
       }
